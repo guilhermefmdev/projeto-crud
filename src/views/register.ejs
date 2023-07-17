@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+
+
+
+    <div class="box">
+        <div class="back-btn">
+            <a href="/list"><img src="img/back-icon.png" class="back-rotate-icon">Voltar</a>
+        </div>
+        <h1><%= title %></h1>
+
+        <% if (typeof message !=='undefined') { %>
+            <div class="toast <%= modalClass %>">
+            <%= message %>
+            </div>
+        <% } %>
+
+        <form action="/register" method="POST">
+            <div>
+                <label>Nome:</label>
+                <input type="text" name="name" placeholder="Digite seu nome" required>
+            </div>
+            <div>
+                <label>Idade:</label>
+                <input type="text" name="age" placeholder="Digite sua idade" required>
+            </div>
+            <div>
+                <label>E-mail:</label>
+                <input type="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div>
+                <label>Senha:</label>
+                <input type="password" name="password" placeholder="Digite a sua senha" required id="passwordInput">
+                <span class="lnr lnr-eye"></span>
+            </div>
+            <div>
+            <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+
+
+
+    <div class="users-list-wrapper">
+    <h1><%= title %></h1> 
+
+    <hr>
+
+    <div  class="users-list">
+
+        <% if(users == '') { %>
+          <%= message %>
+        <% } else { %>
+            <% users.forEach((user) => { %>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <%= user.name %>
+                            <ul>
+                                <li>
+                                    <%= user.email %>
+                                </li>
+                                <li>
+                                    <b>Idade:</b> <%= user.age %>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul> 
+                    <a href="/edit?id=<%= user._id %>">Editar</a>
+                    <a href="/remove/<%= user._id %>">Remover</a>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+
+    <a href="/register" class="register-btn">Cadastrar clientes</a>
+    </div>
+</body>
+</html>

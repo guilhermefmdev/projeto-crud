@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;400&display=swap');
+
+:root {
+    --prim-color: #483D3F;
+    --sec-color: #058ED9;
+    --terc-color: #F4EBD9;
+    --quar-color: #A39A92;
+    --quin-color: #77685D;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto Slab';
+    background: url('../img/circle-scatter-haikei.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+h1 {
+    margin-top: 30px;
+    color: var(--sec-color);
+}
+
+.back-btn a{
+    position: absolute;
+    text-decoration: none;
+    color: var(--prim-color);
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+.back-btn:hover a {
+    text-decoration: underline;
+}
+
+.back-rotate-icon {
+    width: 10px;
+    margin-right: 5px;
+}
+
+.box {
+    padding: 30px 30px 60px 30px;
+    width: 60%;
+    margin: 5% auto;
+    background: var(--terc-color);
+    border-radius: 10px;
+    box-shadow: -.5em .5em 1em rgba(0, 0, 0, 0.192);
+    position: relative;
+}
+
+
+form {
+    width: 100%;
+    margin-top: 40px;
+    margin: 40px 0 0 0;
+}
+
+
+form div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+form label {
+    color: var(--prim-color);
+}
+
+form div:last-of-type {
+    display: flex;
+    align-items: center;
+
+}
+
+form input {
+    margin: 6px 0 15px 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.lnr-eye {
+    position: absolute;
+    top: 38px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 3px;
+    transition: all 300ms ease;
+}
+
+.click {
+    background-color: rgba(0, 0, 0, 0.164);
+    transform: scale(1.1);
+}
+
+form button {
+    margin-top: 10px;
+    width: 50%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: var(--quin-color);
+    color: var(--terc-color);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+form button:hover {
+    transform: scale(1.05);
+    box-shadow: -.5em .5em 1em rgba(0, 0, 0, 0.192);
+}
+
+.users-list-wrapper {
+    width: 80%;
+    margin: 40px auto;
+    background-color: var(--terc-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.users-list{
+    width: fit-content;
+    margin: 10px 0;
+    padding: 5px 20px;
+    list-style-position: inside;
+}
+
+.users-list .list {
+    border: 1px solid var(--quar-color);
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.users-list .list a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--sec-color);
+    border: 1px solid var(--sec-color) ;
+    border-radius: 20px;
+    padding: 5px;
+    transition: all 300ms ease;
+}
+
+.users-list .list a:last-of-type {
+    margin-left: 15px;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red ;
+    border-radius: 20px;
+    padding: 5px;
+    transition: all 300ms ease;
+}
+
+.users-list .list a:last-of-type:hover {
+    background-color:#d9050527 ;
+}
+
+.users-list .list a:hover {
+    background-color:#058fd927;
+}
+
+.register-btn {
+    display: block;
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--quin-color);
+    color: var(--terc-color);
+    text-decoration: none;
+}
+
+.toast {
+    position: absolute;
+    background-color: rgb(183, 250, 183);
+    padding: 10px;
+    top: -100px;
+    left: 35%;
+    border: 2px solid green;
+    border-radius: 10px;
+    color: green;
+    transition: all 500ms ease-in-out;
+}
+
+.showToast {
+    top: 100px;
+}

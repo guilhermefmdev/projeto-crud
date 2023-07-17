@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+
+
+
+    <div class="box">
+        <div class="back-btn">
+            <a href="/"><img src="img/back-icon.png" class="back-rotate-icon">Voltar</a>
+        </div>
+        <h1><%= title %></h1>
+
+        <% if (typeof message !=='undefined') { %>
+            <div class="toast <%= modalClass %>">
+            <%= message %>
+            </div>
+        <% } %>
+
+        <form action="/edit/<%= user._id %>" method="POST">
+            <div>
+                <label>Nome:</label>
+                <input type="text" name="name" placeholder="Insira o novo nome" required value="<%= user.name %>">
+            </div>
+            <div>
+                <label>Idade:</label>
+                <input type="text" name="age" placeholder="Insira a nova idade" required value="<%= user.age %>">
+            </div>
+            <div>
+                <label>E-mail:</label>
+                <input type="email" name="email" placeholder="Insira o novo e-mail" required value="<%= user.email %>">
+            </div>
+            <div>
+            <button type="submit">Editar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
